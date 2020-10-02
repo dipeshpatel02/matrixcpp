@@ -1,5 +1,5 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+#include<conio>
 
 class matrix
 {
@@ -25,7 +25,7 @@ void joinmat();
 void meetmat();
 };
 
-void matrix::getmat1()
+void matrix::getmat1()   //accept value for matrix X
 {
 cout<<"\n enter numbr of rows and columns respectively for first matrix X ";
 cin>>m>>n;
@@ -39,7 +39,7 @@ for(i=1;i<=m;i++)
   }
 }
 
-void matrix::getmat2()
+void matrix::getmat2()   //accept value for matrix Y
 {
 cout<<"\n enter numbr of rows and columns respectively for second matrix Y ";
 cin>>p>>q;
@@ -53,7 +53,7 @@ for(i=1;i<=p;i++)
   }
 }
 
-void matrix::showmat1()
+void matrix::showmat1()     //display matrix X
 {
 cout<<"\n the matrix X is "<<endl;
 for(i=1;i<=m;i++)
@@ -66,7 +66,7 @@ for(i=1;i<=m;i++)
   }
 }
 
-void matrix::showmat2()
+void matrix::showmat2()     //display matrix Y
 {
 cout<<"\n the matrix Y is "<<endl;
 for(i=1;i<=p;i++)
@@ -79,7 +79,7 @@ for(i=1;i<=p;i++)
  }
 }
 
-void matrix::addmat()
+void matrix::addmat()    //for addition
 {
  if((m==p)&&(n==q))
  {
@@ -106,7 +106,7 @@ void matrix::addmat()
  }
 }
 
-void matrix::subtrmat()
+void matrix::subtrmat()    //For subtraction
 {
  if((m==p)&&(n==q))
  {
@@ -133,7 +133,7 @@ void matrix::subtrmat()
  }
 }
 
-void matrix::multmat()
+void matrix::multmat()   //For multiplication
 {
  if(n==p)
  {
@@ -164,7 +164,7 @@ void matrix::multmat()
  }
 }
 
-void matrix::transmat()
+void matrix::transmat()   //for transpose of matrix
 {
  if(m==n)
  {
@@ -376,5 +376,5 @@ while(q=='y')
 goto start;
 }
 cout<<"\n thank you ";
-getch();
+return 0;
 }
